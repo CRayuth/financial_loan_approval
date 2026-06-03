@@ -31,15 +31,26 @@ def train():
 
     print(f"\nBest model: {best_name} — tuning now...")
 
-    param_grid = {
-        'n_estimators': [100, 200],
-        'max_depth': [None, 10, 20],
-        'class_weight': ['balanced']
+    param_grids = {
+        'LogisticRegression': {
+            'C': [0.1, 1, 10],
+            'class_weight': ['balanced'],
+        },
+        'RandomForest': {
+            'n_estimators': [100, 200],
+            'max_depth': [None, 10, 20],
+            'class_weight': ['balanced'],
+        },
+        'GradientBoosting': {
+            'n_estimators': [100, 200],
+            'max_depth': [3, 5],
+            'learning_rate': [0.05, 0.1],
+        },
     }
 
     grid = GridSearchCV(
-        RandomForestClassifier(random_state=42),
-        param_grid,
+        best_model,
+        param_grids[best_name],
         scoring='recall_macro',
         cv=3,
         n_jobs=1
