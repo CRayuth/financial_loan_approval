@@ -1,0 +1,53 @@
+So far, the sources have introduced several types of intelligent agents, various machine learning paradigms, and specific supervised learning algorithms.
+1. Types of Intelligent Agents
+The sources classify agents based on their internal architecture and decision-making capabilities
+:
+Simple Reflex Agents: Act based only on current percepts using predefined "if-then" rules
+.
+Model-Based Reflex Agents: Maintain an internal state to track parts of the environment they cannot currently see
+.
+Goal-Based Agents: Use planning and reasoning to find action sequences that reach specific targets
+.
+Utility-Based Agents: Weigh trade-offs between competing objectives (like safety vs. speed) to maximize a "utility function"
+.
+Learning Agents: Improve their performance over time by adapting based on feedback and experience
+.
+2. General AI and Machine Learning Models
+AI is categorized by its breadth of ability and the methods used to achieve intelligence:
+Breadth of Ability:
+Narrow AI (ANI): Designed for specific tasks; this is the only type currently in existence
+.
+General AI (AGI) & Super AI (ASI): Theoretical models that would match or surpass human intelligence
+.
+Development Approaches:
+Rule-Based AI: Uses explicit instructions coded by humans
+.
+Learning-Based AI (Machine Learning): Identifies patterns in data to make decisions
+.
+Learning Paradigms:
+Supervised Learning: Learning from labeled data to map inputs to outputs
+.
+Unsupervised Learning: Finding hidden structures in unlabeled data (e.g., Clustering)
+.
+Reinforcement Learning: Learning through trial and error using rewards and penalties
+.
+Generative AI Models: Deep learning models, such as ChatGPT, capable of creating original content like text or images
+.
+Agentic AI: Autonomous agents that can plan, use tools, and adapt to achieve goals independently
+.
+3. Specific Supervised Learning Algorithms
+The sources provide detailed technical breakdowns for three primary supervised algorithms:
+K-Nearest Neighbors (KNN): A classification algorithm that labels an observation based on the most common class among its k closest neighbors in the training data
+.
+Linear Regression: Used to predict continuous numeric values (like house prices) by modeling relationships as a straight line (Simple) or a hyperplane (Multiple)
+.
+Logistic Regression: Despite its name, this is a classification algorithm. It uses a Sigmoid function to transform linear scores into probabilities between 0 and 1 for binary decisions, or a Softmax function for multi-class classification
+.
+4. Optimization and Evaluation Frameworks
+To make these algorithms work effectively, the sources also discuss:
+Gradient Descent: An optimization algorithm used to minimize the "Mistake Score" (Cost Function) by iteratively adjusting model parameters
+.
+Evaluation Metrics: Models are assessed using metrics such as Accuracy, Precision, Recall, and F1 Score for classification, or MAE and MSE for regression
+.
+Feature Selection Methods: Techniques to identify the most useful data inputs, including Filter methods (like Pearson Correlation), Wrapper methods, and Embedded methods
+.

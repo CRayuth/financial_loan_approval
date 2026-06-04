@@ -3,6 +3,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import classification_report
+from xgboost import XGBClassifier
 from think.split import split
 
 
@@ -12,7 +13,8 @@ def train():
     models = {
         'LogisticRegression': LogisticRegression(max_iter=1000, random_state=42),
         'RandomForest': RandomForestClassifier(random_state=42),
-        'GradientBoosting': GradientBoostingClassifier(random_state=42)
+        'GradientBoosting': GradientBoostingClassifier(random_state=42),
+        'XGBoost': XGBClassifier(random_state=42, eval_metric='mlogloss', verbosity=0),
     }
 
     best_model = None
@@ -44,6 +46,11 @@ def train():
         'GradientBoosting': {
             'n_estimators': [100, 200],
             'max_depth': [3, 5],
+            'learning_rate': [0.05, 0.1],
+        },
+        'XGBoost': {
+            'n_estimators': [100, 200],
+            'max_depth': [3, 6],
             'learning_rate': [0.05, 0.1],
         },
     }

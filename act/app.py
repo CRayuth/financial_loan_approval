@@ -78,7 +78,7 @@ if st.button("Evaluate Application"):
     st.header("Agent Decision")
 
     st.metric("Confidence of Repayment", f"{confidence:.1f}%")
-    st.progress(confidence / 100)
+    st.progress(float(confidence) / 100)
 
     if decision == 'Approved':
         st.success("Credit Line Auto-Approved")
